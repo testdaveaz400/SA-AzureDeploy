@@ -17,7 +17,7 @@ steps:
     subscriptionId: 'c7d4ef2e-d5ee-4cd2-b88c-c435f6281b52'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'lala'
-    location: 'West Europe'
+    location: 'West Us'
     templateLocation: 'Linked artifact'
     csmFile: '$(Build.SourcesDirectory)/tests/main.json'
     csmParametersFile: '$(Build.SourcesDirectory)/tests/param.json'
