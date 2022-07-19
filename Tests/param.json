@@ -2,14 +2,11 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "adminUsername": {
-      "value": "testdave"
-    },
-    "adminPasswordOrKey": {
+    "sqlAdministratorLogin": {
       "value": "!2Bu$t3r400!2"
     },
-    "dnsLabelPrefix": {
-      "value": "jsjsjdgywgwygwygdwygwdydgw"
-    }
+    "sqlAdministratorLoginPassword": {		
+      "value": "testdave"		
+    }		
   }
 }
