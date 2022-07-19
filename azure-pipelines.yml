@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'lala'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.json'
-    csmParametersFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.parameters.json'
+    csmFile: '$(Build.SourcesDirectory)/tests/main.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/tests/param.json'
     deploymentMode: 'Incremental'
