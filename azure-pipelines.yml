@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: windows-latest
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure Pass - Sponsorship(c7d4ef2e-d5ee-4cd2-b88c-c435f6281b52)'
+    subscriptionId: 'c7d4ef2e-d5ee-4cd2-b88c-c435f6281b52'
+    action: 'Create Or Update Resource Group'
+    location: 'West Europe'
+    templateLocation: 'Linked artifact'
+    csmFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.json'
+    csmParametersFile: '$(Build.SourcesDirectory)/StorageAccount/azuredeploy.parameters.json'
+    deploymentMode: 'Incremental'
